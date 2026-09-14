@@ -325,6 +325,23 @@ body {
   transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .work-card:hover .work-card-img img { transform: scale(1.05); }
+.work-card-img-dual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+.work-card-img-dual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.work-card:hover .work-card-img-dual img { transform: scale(1.05); }
 .work-card-overlay {
   position: absolute; inset: 0;
   background: linear-gradient(to top, rgba(248,246,241,0.9) 0%, transparent 60%);
@@ -779,23 +796,43 @@ body {
 
     <!-- Project 3 -->
     <div class="work-card reveal">
-      <div class="work-card-img">
-        <img src="assets/project-dashboard.png" alt="数据可视化大屏">
+      <div class="work-card-img-dual">
+        <img src="assets/project-dashboard.png" alt="上海市体育局体质健康测试展示大屏">
+        <img src="assets/sh-sports-monitor.png" alt="上海市体育局体质监测系统">
         <div class="work-card-overlay"></div>
       </div>
       <div class="work-card-body">
         <div class="work-card-num">03</div>
-        <h3 class="work-card-title">数据可视化 · 数据 → 呈现 → 决策</h3>
-        <p class="work-card-desc">基于 React + ECharts 将原始监测数据转化为地图、排行、趋势图，支持多分辨率自适应与数据轮播——可直接迁移到情报/舆情可视化与需求报告的呈现能力。</p>
+        <h3 class="work-card-title">上海市体育局双项目 · 数据 → 呈现 → 决策</h3>
+        <p class="work-card-desc">一期交付上海市体育局体质健康测试展示大屏（React + DVA + ECharts），独立完成地图、排行、趋势图等核心图表，采用组件化分区布局与数据轮播，保障多分辨率下自适应稳定投放；二期交付体育局监测系统（Spring Boot + Vue 3 全栈），覆盖监测数据接入、统计分析、可视化全链路，并完成达梦（DM）国产化数据库适配与 Redis 会话共享优化。两项独立交付，沉淀"数据 → 呈现 → 决策"完整链路，可直接迁移到情报/舆情可视化与需求报告。</p>
         <div class="work-card-tags">
-          <span class="work-tag">数据可视化</span>
-          <span class="work-tag">情报呈现</span>
+          <span class="work-tag">体育局展示大屏</span>
+          <span class="work-tag">体质监测系统</span>
           <span class="work-tag">ECharts</span>
+          <span class="work-tag">国产化数据库</span>
         </div>
       </div>
     </div>
 
     <!-- Project 4 -->
+    <div class="work-card reveal">
+      <div class="work-card-img">
+        <img src="assets/sioc-hujinbo-site.png" alt="SIOC 胡金波课题组官网">
+        <div class="work-card-overlay"></div>
+      </div>
+      <div class="work-card-body">
+        <div class="work-card-num">04</div>
+        <h3 class="work-card-title">SIOC 胡金波课题组官网 · 前端开发</h3>
+        <p class="work-card-desc">中科院上海有机化学研究所（SIOC）胡金波课题组官网，完全依据设计稿还原开发整站前端。围绕清晰的视觉层级沟通复杂的课题组信息，兼顾桌面与移动端布局与导航，保障多端视觉还原度与浏览体验——体现高质量 UI 还原、垂类页面设计与产品化实现的细节把控能力。</p>
+        <div class="work-card-tags">
+          <span class="work-tag">官网前端</span>
+          <span class="work-tag">多端适配</span>
+          <span class="work-tag">UI 细节</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 5 -->
     <div class="work-card reveal">
       <div class="work-card-img-split">
         <div class="split-left">
@@ -809,14 +846,14 @@ body {
         <div class="work-card-overlay"></div>
       </div>
       <div class="work-card-body">
-        <div class="work-card-num">04</div>
-        <h3 class="work-card-title">AI 工作流 & Nebula 游戏平台 · 用系统解决一类问题</h3>
-        <p class="work-card-desc">从 0 搭建 AI 内容生产 SOP，把多人重复流程标准化、工具化；独立构建 Nebula 游戏平台（用户认证、小游戏交易、数据分析后台），理解游戏站内用户运营与用户诉求。</p>
+        <div class="work-card-num">05</div>
+        <h3 class="work-card-title">Nebula 游戏平台 & AI 工作流 · 用系统解决一类问题</h3>
+        <p class="work-card-desc">从 0 搭建 AI 内容生产 SOP，把多人重复流程标准化、工具化；独立构建 Nebula 游戏平台（用户认证、小游戏交易、数据分析后台），理解游戏站内用户运营与用户诉求；并训练专属 LoRA 模型保证原创 IP 角色一致性。</p>
         <div class="work-card-tags">
           <span class="work-tag">游戏平台</span>
           <span class="work-tag">SOP 制定</span>
           <span class="work-tag">工作流搭建</span>
-          <span class="work-tag">数据分析后端</span>
+          <span class="work-tag">LoRA 模型</span>
         </div>
       </div>
     </div>
